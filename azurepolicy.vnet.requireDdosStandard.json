@@ -1,0 +1,16 @@
+{
+    "properties": {
+      "displayName": "Custom - Require Standard DDoS protection instead of Basic",
+      "policyType": "Custom",
+      "mode": "All",
+      "parameters": {},
+      "policyRule": {
+        "if": {
+          "field": "Microsoft.Network/virtualNetworks/enableDdosProtection",
+          "equals": "False"
+        },
+        "then": {
+          "effect": "deny"
+        }
+      }
+  }
